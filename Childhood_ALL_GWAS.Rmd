@@ -1,0 +1,33 @@
+---
+title: "Childhood ALL GWAS"
+author: "Sandeep Singh"
+date: "08/02/2021"
+output: md_document
+---
+
+# Childhood Acute lymphoblastic leukemia age-specific association 
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(plotly)
+library(purrr) # to append multiple dataframes
+library(CMplot)
+library(qqman)
+```
+## Introduction
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+Age_incidence <- read_excel("C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/Age_incidence_rate.xlsx")
+```
+
+```{r fig.align="center", fig.width=4, fig.height=4, fig.cap= "Figure 1: Age-specific incidence rate in childhood ALL"}
+ggplot(Age_incidence, aes(x = Age, y = Incidence_rate))+
+  geom_line(linetype = "dashed", color="blue")+
+  geom_point()+
+  xlab("Age (year)")+
+  ylab("Incidence Rate/1,000,000")+
+  theme_classic()
+```
+
