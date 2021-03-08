@@ -48,7 +48,9 @@ knitr::kable(Age_result[1:5, ], align = "lccrr", caption = "Table 1: Final Resul
 ```
 
 ```{r echo=FALSE, fig.align="center", fig.width=6, fig.height=6, fig.cap= "Figure 3: QQ plot"}
-qq(Age_result$P)
+ggplot(Age_result, aes(sample=P))+
+  stat_qq()+
+  theme_classic()
 ```
 
 ```{r, include=FALSE, echo=FALSE, fig.align="center", fig.width=4, fig.height=4, fig.cap= "Figure 4: Circular Manhattan plot"}
@@ -113,11 +115,11 @@ head(Age_SNPnexus, 2)
 
 ```{r echo=FALSE}
 # creating a text file for SNPnexus analysis
-write.table(Age_SNPnexus, file = "C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/AGE_SNPnexus.txt",
-            row.names = FALSE,
-            col.names = FALSE,
-            sep = "\t",
-            quote = FALSE)
+# write.table(Age_SNPnexus, file = "C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/AGE_SNPnexus.txt",
+#             row.names = FALSE,
+#             col.names = FALSE,
+#             sep = "\t",
+#             quote = FALSE)
 ```
 
 ### File preparation for  ANNOVAR using LD_SNP information
@@ -131,9 +133,9 @@ head(Age_Annovar_1, 2)
 
 ```{r echo=FALSE}
 # creating a text file for ANNOVAR analysis
-write.table(Age_SNPnexus, file = "C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/AGE_ANNOVAR_pre.txt",
-            row.names = FALSE,
-            col.names = FALSE,
-            sep = "\t",
-            quote = FALSE)
+# write.table(Age_SNPnexus, file = "C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/AGE_ANNOVAR_pre.txt",
+#             row.names = FALSE,
+#             col.names = FALSE,
+#             sep = "\t",
+#             quote = FALSE)
 ```
