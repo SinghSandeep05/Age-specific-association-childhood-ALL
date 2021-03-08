@@ -58,14 +58,14 @@ Method
 </tbody>
 </table>
 
-<img src="Childhood_ALL_GWAS_files/figure-markdown_strict/unnamed-chunk-5-1.png" alt="Figure 3: QQ plot" width="30%" />
+<img src="Childhood_ALL_GWAS_files/figure-markdown_strict/unnamed-chunk-5-1.png" alt="Figure 3: QQ plot" width="40%" />
 <p class="caption">
 Figure 3: QQ plot
 </p>
 
     knitr::include_graphics("Circular-Manhattan.P.jpg")
 
-<img src="Circular-Manhattan.P.jpg" alt="Figure 4: Circular Manhattan plot" width="80%" />
+<img src="Circular-Manhattan.P.jpg" alt="Figure 4: Circular Manhattan plot" width="60%" />
 <p class="caption">
 Figure 4: Circular Manhattan plot
 </p>
