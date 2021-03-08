@@ -48,9 +48,7 @@ knitr::kable(Age_result[1:5, ], align = "lccrr", caption = "Table 1: Final Resul
 ```
 
 ```{r echo=FALSE, fig.align="center", fig.width=6, fig.height=6, fig.cap= "Figure 3: QQ plot"}
-ggplot(Age_result, aes(sample=P))+
-  stat_qq()+
-  theme_classic()
+qq(Age_result$P)
 ```
 
 ```{r, include=FALSE, echo=FALSE, fig.align="center", fig.width=4, fig.height=4, fig.cap= "Figure 4: Circular Manhattan plot"}
