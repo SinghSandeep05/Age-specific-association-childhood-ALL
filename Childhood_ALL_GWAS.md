@@ -58,7 +58,7 @@ Method
 </tbody>
 </table>
 
-<img src="Childhood_ALL_GWAS_files/figure-markdown_strict/unnamed-chunk-5-1.png" alt="Figure 3: QQ plot" width="75%" />
+<img src="Childhood_ALL_GWAS_files/figure-markdown_strict/unnamed-chunk-5-1.png" alt="Figure 3: QQ plot" width="30%" />
 <p class="caption">
 Figure 3: QQ plot
 </p>
