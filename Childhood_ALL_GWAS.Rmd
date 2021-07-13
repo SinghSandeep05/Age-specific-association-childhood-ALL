@@ -31,12 +31,16 @@ ggplot(Age_incidence, aes(x = Age, y = Incidence_rate))+
   scale_x_continuous(breaks=0:14,
                      labels=c("<1", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"))+
   scale_y_continuous(breaks=c(0,10, 20, 30, 40, 50, 60, 70, 80, 90, 100))+
-  theme_classic()
+  theme_classic()+
+  geom_text(aes(label = rownames(Age_incidence)),
+              size = 3.5)
+  
 ```
 
 ## Method
 
-* Results were obtained using PLINK 
+* Results were obtained using PLINK after QC
+* Genomic inflation factor was 1
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # Formatted table
 Age_result <- read_excel("C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/AGE_ASS_formatted.xlsx") %>%

@@ -9,7 +9,8 @@ Figure 1: Age-specific incidence rate in childhood ALL
 
 ## Method
 
--   Results were obtained using PLINK
+-   Results were obtained using PLINK after QC
+-   Genomic inflation factor was 1
 
 <table>
 <caption>Table 1: Final Result.</caption>
