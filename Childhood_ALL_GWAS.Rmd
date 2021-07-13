@@ -22,20 +22,52 @@ library(qqman)
 Age_incidence <- read_excel("C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/Age_incidence_rate.xlsx")
 ```
 
-```{r, echo=FALSE, fig.align="center", fig.cap= "Figure 1: Age-specific incidence rate in childhood ALL"}
+```{r, echo=FALSE, fig.align="center", fig.cap= "Figure 1: Age-specific incidence rate in childhood ALL by single year of age-at-diagnosis"}
 ggplot(Age_incidence, aes(x = Age, y = Incidence_rate))+
-  geom_line(linetype = "dashed", color="blue")+
+  geom_line(linetype = "dashed", color="cyan3")+
   geom_point()+
-  xlab("Age (year)")+
-  ylab("Incidence Rate/1,000,000")+
+  labs(x = "Age (year)", y = "Incidence Rate/1,000,000")+
   scale_x_continuous(breaks=0:14,
                      labels=c("<1", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"))+
   scale_y_continuous(breaks=c(0,10, 20, 30, 40, 50, 60, 70, 80, 90, 100))+
   theme_classic()+
-  geom_text(aes(label = rownames(Age_incidence)),
-              size = 3.5)
+  annotate('text', x = 0.8, y = 20, label = '20/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 1.8, y = 46, label = '46/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 2, y = 100, label = '98/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+   annotate('text', x = 3.8, y = 95, label = '95/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 4.8, y = 76, label = '76/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 4.2, y = 47, label = '46/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 6.9, y = 44.5, label = '44/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 7.8, y = 32.5, label = '32/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 8, y = 24, label = '26/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 9, y = 28.5, label = '27/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 10, y = 22, label = '24/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 11, y = 25, label = '23/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 12, y = 17, label = '19/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 13, y = 23, label = '21/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 14.8, y = 22, label = '22/million',
+           color = '#990F02', fontface = 'bold', size = 3)+
+  annotate('text', x = 14.5, y = 10, label = 'Source:NCI, SEER',
+           color = 'cyan3', fontface = 'bold', size = 2)
+
   
 ```
+Age-adjusted Surveillance, Epidemiology, and End Results cancer-incidence rates, 2006-2010, in childhood ALL, age 0-14 years. Incidence rates are per 1,000,000 per year and are age-adjusted to the United States standard population. Y-axis represents incidence rate per 1,000,000 per year and
+X-axis represents age in years.
 
 ## Method
 

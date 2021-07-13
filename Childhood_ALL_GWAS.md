@@ -2,10 +2,17 @@
 
 ## Introduction
 
-<img src="Childhood_ALL_GWAS_files/figure-markdown_strict/unnamed-chunk-3-1.png" alt="Figure 1: Age-specific incidence rate in childhood ALL"  />
+<img src="Childhood_ALL_GWAS_files/figure-markdown_strict/unnamed-chunk-3-1.png" alt="Figure 1: Age-specific incidence rate in childhood ALL by single year of age-at-diagnosis"  />
 <p class="caption">
-Figure 1: Age-specific incidence rate in childhood ALL
+Figure 1: Age-specific incidence rate in childhood ALL by single year of
+age-at-diagnosis
 </p>
+
+Age-adjusted Surveillance, Epidemiology, and End Results
+cancer-incidence rates, 2006-2010, in childhood ALL, age 0-14 years.
+Incidence rates are per 1,000,000 per year and are age-adjusted to the
+United States standard population. Y-axis represents incidence rate per
+1,000,000 per year and X-axis represents age in years.
 
 ## Method
 
