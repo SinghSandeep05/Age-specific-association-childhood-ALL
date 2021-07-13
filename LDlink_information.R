@@ -1,4 +1,4 @@
-############## LDlink ##############
+############## LD link ##############
 
 # Create LD SNP list from your original data
 # First step is to create working directory

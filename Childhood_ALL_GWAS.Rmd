@@ -13,7 +13,7 @@ library(ggplot2)
 library(data.table)
 library(dplyr)
 library(plotly)
-library(purrr) # to append multiple dataframes
+library(purrr) # to append multiple data frames
 library(CMplot)
 library(qqman)
 ```
@@ -97,9 +97,9 @@ AGE_SNP_LD <- fread("C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL
 knitr::kable(AGE_SNP_LD[1:5, ], align = "lccrr", caption = "Age-specific SNPs and SNPs in LD.")
 ```
 
-* A total of 3099 SNPs were obtained from LDlink 
+* A total of 3099 unique SNPs were obtained from LDlink 
 
-* SNP (rs202050948) identifed in AGE association was not available in LDlink, hence SNPs located in LD for this SNP was obtained from Haploreg. This SNP is not in LD with any other SNP
+* SNP (rs202050948) identified in AGE association was not available in LDlink, hence SNPs located in LD for this SNP was obtained from Haploreg. This SNP is not in LD with any other SNP
 
 
 ### File creation for SNPnexus using LDSNP information 
@@ -131,9 +131,23 @@ head(Age_Annovar_1, 2)
 
 ```{r echo=FALSE}
 # creating a text file for ANNOVAR analysis
-# write.table(Age_SNPnexus, file = "C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/AGE_ANNOVAR_pre.txt",
+# write.table(Age_SNPnexus, file = "C:/SANDEEP/MAIN/
+# CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/AGE_ANNOVAR_pre.txt",
 #             row.names = FALSE,
 #             col.names = FALSE,
 #             sep = "\t",
 #             quote = FALSE)
+```
+
+```{r}
+ALL_LD <- fread("C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/SNPnexus_results/Age_ALL_GWAS_hg19_txt/1KGen.txt") %>% 
+  rename(SNP = "Variation ID") %>% 
+  distinct(SNP, .keep_all = TRUE) %>% 
+  select(1:7)
+```
+
+```{r}
+# Chekcing difference of SNPs in T1D_MS_original_119 file and T1D_MS_original_110 file
+
+# setdiff(AGE_SNP_LD$SNP, ALL_LD$LD)
 ```

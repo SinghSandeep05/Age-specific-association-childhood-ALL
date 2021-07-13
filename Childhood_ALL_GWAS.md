@@ -1,16 +1,13 @@
-Childhood Acute lymphoblastic leukemia age-specific association
-===============================================================
+# Childhood Acute lymphoblastic leukemia age-specific association
 
-Introduction
-------------
+## Introduction
 
 <img src="Childhood_ALL_GWAS_files/figure-markdown_strict/unnamed-chunk-3-1.png" alt="Figure 1: Age-specific incidence rate in childhood ALL"  />
 <p class="caption">
 Figure 1: Age-specific incidence rate in childhood ALL
 </p>
 
-Method
-------
+## Method
 
 -   Results were obtained using PLINK
 
@@ -47,7 +44,7 @@ Method
 <td style="text-align: left;">rs2388773</td>
 <td style="text-align: center;">16</td>
 <td style="text-align: center;">54636780</td>
-<td style="text-align: right;">4.90e-05</td>
+<td style="text-align: right;">4.89e-05</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">rs665159</td>
@@ -57,6 +54,8 @@ Method
 </tr>
 </tbody>
 </table>
+
+Table 1: Final Result.
 
 <img src="Childhood_ALL_GWAS_files/figure-markdown_strict/unnamed-chunk-5-1.png" alt="Figure 3: QQ plot" width="40%" />
 <p class="caption">
@@ -176,6 +175,9 @@ Figure 4: Circular Manhattan plot
 </tbody>
 </table>
 
+Top one hundred SNPs associated with childhood ALL risk with
+age-specificity.
+
 -   Creating a text file to keep 100 SNPs
 
 <!-- -->
@@ -227,9 +229,11 @@ Figure 4: Circular Manhattan plot
 </tbody>
 </table>
 
--   A total of 3099 SNPs were obtained from LDlink
+Age-specific SNPs and SNPs in LD.
 
--   SNP (rs202050948) identifed in AGE association was not available in
+-   A total of 3099 unique SNPs were obtained from LDlink
+
+-   SNP (rs202050948) identified in AGE association was not available in
     LDlink, hence SNPs located in LD for this SNP was obtained from
     Haploreg. This SNP is not in LD with any other SNP
 
@@ -248,3 +252,12 @@ Figure 4: Circular Manhattan plot
     ##        LD_SNP
     ## 1:  rs1004327
     ## 2: rs12508358
+
+    ALL_LD <- fread("C:/SANDEEP/MAIN/CAREER/My_papers/PAPERS_in_PROGRESS/AGE_ALL/ALL_AGE_DATA_NEW/SNPnexus_results/Age_ALL_GWAS_hg19_txt/1KGen.txt") %>% 
+      rename(SNP = "Variation ID") %>% 
+      distinct(SNP, .keep_all = TRUE) %>% 
+      select(1:7)
+
+    # Chekcing difference of SNPs in T1D_MS_original_119 file and T1D_MS_original_110 file
+
+    # setdiff(AGE_SNP_LD$SNP, ALL_LD$LD)
